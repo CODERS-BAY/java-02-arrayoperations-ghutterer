@@ -34,9 +34,24 @@ public class ArrayOperations {
      * @see <a href="sorting algortihms">http://faculty.cs.niu.edu/~hutchins/csci241/sorting.htm</a>
      */
     public int[] sort() {
-    	int [] sortedNum = numbers.clone();
-    	Arrays.sort(sortedNum);
-       return sortedNum;
+    	
+    	int temp;
+    	for (int i =0; i<numbers.length;i++) {
+    		for (int j=0; j<numbers.length-1;j++) {
+    			if(numbers[j]>numbers[j+1]) {
+    				temp = numbers[j+1];
+    				numbers[j+1]= numbers[j];
+    				numbers[j]=temp;
+    			}
+    		}
+    		
+    	} return numbers;
+    	
+    	
+    	
+//    	int [] sortedNum = numbers.clone();
+//    	Arrays.sort(sortedNum);
+//       return sortedNum;
     }
 
     /**
